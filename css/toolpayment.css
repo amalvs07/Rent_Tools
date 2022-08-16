@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+
+/***************************nav bar codes********************/
+
+.navbar {
+    position: fixed;
+    width: 96%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    justify-content: space-between;
+}
+
+.navbar.sticky {
+    width: 100vw;
+    max-height: 100px;
+    padding: 40px 0;
+    background: darkblue;
+    justify-content: space-between;
+}
+
+.navbar .max-widthh {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 90px;
+}
+
+.navbar .logo a {
+    position: fixed;
+    top: 30px;
+    color: #000;
+    /* color: #fff; */
+    font-size: 35px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar .logo a span {
+    color: blue;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+    color: #fff;
+}
+
+.navbar.sticky .logo a {
+    color: #fff;
+    top: 20px;
+}
+
+
+/******************* home section styling ***********************/
+
+.home {
+    min-height: 40px;
+}
+
+.class-cart {
+    position: relative;
+    bottom: 100px;
+    right: 100px;
+    font-size: 20px;
+}
+
+.class-cart a {
+    text-decoration: none;
+}
+
+
+/* form */
+
+h5.head_agileinfo {
+    font-size: 2em;
+}
+
+input.form-control {
+    background: #BED0E9;
+}
+
+.contact-top1 .form-group label,
+form.f-color .form-control {
+    color: #000;
+    letter-spacing: 1px;
+    background: transparent;
+}
+
+select.form-control.input-lg {
+    cursor: pointer;
+}
+
+form.nav-search.form-inline.form-control {
+    background: transparent;
+    border: none;
+}
+
+.form-control {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    -webkit-transition: all 0.1s ease-in;
+    -moz-transition: all 0.1s ease-in;
+    -ms-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+}
+
+h5.head_agileinfo {
+    font-size: 3em;
+    font-weight: 400;
+    color: #000;
+}
+
+h5.head_agileinfo span {
+    font-family: 'Elsie Swash Caps', cursive;
+    color: #0076be;
+    font-weight: bold;
+}

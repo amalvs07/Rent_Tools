@@ -1,0 +1,572 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+    /********************** common css code ****************************/
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    i {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 18px;
+    }
+    
+    .max-width {
+        max-width: 1300px;
+        padding: 0 80px;
+        /* margin: auto; */
+        padding-top: 40px;
+        margin: 130px 100px 0px 130px;
+    }
+    
+    p {
+        margin-top: 30px;
+        text-align: center;
+        color: darkgrey;
+        font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans';
+    }
+    
+    h2 {
+        margin-top: 25px;
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    
+    body {
+        background-image: url(../img/neww/adminpanel2.jpg);
+        background-size: 60%;
+        background-repeat: no-repeat;
+        background-position: 100% 40%;
+        background-attachment: fixed;
+        overflow-x: hidden;
+    }
+    
+    header {
+        background: darkblue;
+    }
+    
+    header img {
+        max-width: 80%;
+        border-radius: 50%;
+        text-align: center;
+        padding: 30px;
+        display: block;
+        position: relative;
+        left: 25px;
+    }
+    
+    header span {
+        text-align: center;
+        display: block;
+        font-size: 20px;
+        color: #fff;
+        padding-bottom: 20px;
+    }
+    
+    .navbar {
+        background-color: darkblue;
+        padding: 50px 0px;
+    }
+    
+    .navbar .logo a {
+        position: fixed;
+        left: 20%;
+        top: 30px;
+        color: #fff;
+        /* color: #fff; */
+        font-size: 35px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    
+    .navbar .logo a span {
+        color: #fff;
+        transition: all 0.3s ease;
+    }
+    /***************************nav bar codes********************/
+    
+    .scroll-up-btn {
+        position: fixed;
+        height: 45px;
+        width: 42px;
+        background: darkblue;
+        right: 30px;
+        bottom: 10px;
+        text-align: center;
+        line-height: 45px;
+        color: #fff;
+        z-index: 9999;
+        font-size: 30px;
+        border-radius: 6px;
+        border-bottom-width: 2px;
+        cursor: pointer;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+    
+    .scroll-up-btn.show {
+        bottom: 30px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    
+    .scroll-up-btn:hover {
+        filter: brightness(90%);
+    }
+    /* me code */
+    
+    ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-left: -240px;
+        width: 240px;
+        height: 100vh;
+        overflow-y: auto;
+        transition: all .3s;
+        box-shadow: 0px 0px 2px 3px darkblue;
+        border-bottom-right-radius: 30px;
+    }
+    
+    ul li {
+        height: 65px;
+        outline: none;
+    }
+    
+    ul li a {
+        display: block;
+        height: 100%;
+        width: 100%;
+        line-height: 65px;
+        font-size: 20px;
+        color: darkblue;
+        padding-left: 40px;
+        box-sizing: border-box;
+        border-bottom: 1px solid darkblue;
+        border-top: 1px solid rgba(255, 255, 255, .1);
+        transition: .4s;
+        text-decoration: none;
+    }
+    
+    ul li:hover a {
+        padding-left: 50px;
+        transition: all ease .5s;
+    }
+    
+    li a.contact {
+        border-bottom: 1px solid darkblue;
+    }
+    
+    .active a {
+        color: #000;
+        border-left: 5px solid #000;
+    }
+    
+    section {
+        margin-left: 0px;
+        transition: all .3s;
+    }
+    
+    i span {
+        background: black;
+        padding: 14px;
+    }
+    
+    i {
+        position: fixed;
+        margin: 20px 25px;
+        font-size: 40px;
+        color: darkblue;
+        cursor: pointer;
+    }
+    
+    .ul_show {
+        margin-left: 0px;
+    }
+    
+    .slide_image {
+        margin-left: 260px;
+    }
+    
+    h1 {
+        font-size: 40px;
+        padding: 15px 20px;
+    }
+    
+    p {
+        padding: 0 20px 10px 20px;
+        text-align: justify;
+    }
+    
+    .heading {
+        font-size: 60px;
+        color: darkslateblue;
+        max-width: 50%;
+        padding: 20px 0px;
+        font-weight: 700;
+        position: relative;
+        left: 13%;
+        font-family: 'Ubuntu';
+    }
+    
+    .cards {
+        position: absolute;
+        padding: 12px;
+        left: 17%;
+        top: 30%;
+        column-gap: 30px;
+        column-count: 2;
+        display: inline-block;
+        /* box-shadow: 3px 6px 12px 4px black; */
+        border-radius: 10px;
+    }
+    
+    .cards .card1,
+    .card2,
+    .card3,
+    .card4 {
+        position: relative;
+        margin-bottom: 10px;
+        padding: 20px 0px;
+        font-size: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .card1 {
+        background: #d1ecf1;
+        color: #35a4ba;
+    }
+    
+    .card2 {
+        background: #fddcdf;
+        color: #f65a6f;
+    }
+    
+    .card3 {
+        background: #d6d8d9;
+        color: #3a3e41;
+    }
+    
+    .card4 {
+        background: #88f3dc;
+        color: #05775e;
+    }
+    
+    h2 {
+        padding: 15px;
+    }
+    /************************ user module *****************/
+    
+    h1 {
+        text-align: center;
+        font-size: 40px;
+        padding-bottom: 50px;
+        font-weight: 800;
+        font-family: 'Ubuntu';
+    }
+    
+    .table-align {
+        align-items: center;
+        position: relative;
+        max-width: 1200px;
+        left: 10%;
+    }
+    
+    table {
+        text-align: center;
+        border: 2px;
+        border-color: white;
+        margin-right: 15%;
+        /* margin-left: 10%; */
+    }
+    
+    tr th {
+        /* background-color: #35a4ba; */
+        padding: 2%;
+        width: 20%;
+    }
+    
+    tr th:first-child {
+        text-align: left;
+    }
+    
+    tr td {
+        /* background-color: #d1ecf1; */
+        opacity: .6;
+        padding: 15px;
+    }
+    /* tr td:hover {
+        background-color: rgba(27, 334, 20, 0.3);
+    } */
+    
+    tr td:first-child {
+        padding-right: 50px;
+        text-align: left;
+    }
+    
+    tr td:nth-child(even) {
+        padding-right: 30px;
+    }
+    
+    tr td:last-child {
+        padding-right: 50px;
+    }
+    
+    tr td img {
+        width: 150%;
+    }
+    
+    td a {
+        padding: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    
+    td .edit {
+        background: dodgerblue;
+        color: #fff;
+        margin: 5px;
+    }
+    
+    td .delete {
+        background: #d1122b;
+        color: #fff;
+        margin: 5px;
+    }
+    /******* order module *******/
+    
+    .order,
+    .tool,
+    .feedback {
+        padding-top: 10%;
+        background: white;
+        padding-bottom: 10%;
+        padding-right: 10%;
+    }
+    
+    .alert {
+        padding: 15px;
+    }
+    
+    .alert-danger {
+        color: #D8000C;
+        background: #FFBABA;
+        padding: 15px;
+    }
+    
+    .alert-success {
+        color: #270;
+        background: #dff2bf;
+        padding: 15px;
+    }
+    /* user */
+    
+    #user .table-align table tr th {
+        background-color: #35a4ba;
+    }
+    
+    #user .table-align table tr td {
+        background-color: #d1ecf1;
+    }
+    
+    #user .table-align table tr td:hover {
+        background-color: #bfd3d6;
+    }
+    /* order */
+    
+    #order .table-align table tr th {
+        background-color: #f65a6f;
+    }
+    
+    #order .table-align table tr td {
+        background-color: #fddcdf;
+    }
+    
+    #order .table-align table tr td:hover {
+        background-color: #ccb7b8;
+    }
+    /* tool */
+    
+    #tool .table-align table tr th {
+        background-color: #3a3e41;
+    }
+    
+    #tool .table-align table tr td {
+        background-color: #d6d8d9;
+    }
+    
+    #tool .table-align table tr td:hover {
+        background-color: #bfc4c7;
+    }
+    /* feedback */
+    
+    #feedback .table-align table tr th {
+        background-color: #05775e;
+    }
+    
+    #feedback .table-align table tr td {
+        background-color: #88f3dc;
+    }
+    
+    #feedback .table-align table tr td:hover {
+        background-color: #5ccfb6;
+    }
+    /* *************************Mediaqurey code| responsive designs********************************* */
+    /********************************* form in put codes ****************************************/
+    
+    .form-design {
+        position: relative;
+        padding: 30px;
+        width: 200%;
+        max-width: 30%;
+        left: 35%;
+        border-radius: 20px;
+        /* box-shadow: 0px 0px 20px 3px black; */
+    }
+    
+    .form-design form {
+        width: 30em;
+        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    h2 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    form .field {
+        position: relative;
+        height: 50px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    form .field input {
+        height: 100%;
+        width: 100%;
+        outline: none;
+        padding-left: 15px;
+        border-radius: 5px;
+        border: 1px solid lightgrey;
+        border-bottom-width: 2px;
+        font-size: 17px;
+        transition: all 0.3s ease;
+    }
+    
+    form .field input[type="file"] {
+        padding-top: 10px;
+        padding-left: 150px;
+    }
+    
+    form .field select {
+        width: 100%;
+        height: 100%;
+    }
+    
+    form .field input:focus {
+        border-color: #838bfc;
+        /* box-shadow: inset 0 0 3px #fb6aae; */
+    }
+    
+    form .field input::placeholder {
+        color: #999;
+        transition: all 0.3s ease;
+    }
+    
+    form .field input:focus::placeholder {
+        color: #b3b3b3;
+    }
+    
+    form .btn {
+        height: 50px;
+        width: 100%;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    form .btn .btn-layer {
+        height: 100%;
+        width: 300%;
+        position: absolute;
+        left: -100%;
+        background: -webkit-linear-gradient(right, #548bdd, #0a68e4, #548bdd, #0a68e4);
+        border-radius: 5px;
+        transition: all 0.4s ease;
+        ;
+    }
+    
+    form .btn:hover .btn-layer {
+        left: 0;
+    }
+    
+    form .btn input[type="submit"] {
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        position: relative;
+        background: none;
+        border: none;
+        color: #fff;
+        padding-left: 0;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    
+    label {
+        color: #888;
+        font-size: 18px;
+        padding: 10px;
+    }
+    /* neewwiewfewfipewfpiewf */
+    
+    .radio_tabs li {
+        border-bottom: 1px solid darkblue;
+    }
+    
+    .radio_tabs li label {
+        margin-right: 15px;
+        display: block;
+        position: relative;
+        cursor: pointer;
+        padding: 20px;
+        color: darkblue;
+    }
+    
+    .radio_tabs li .radio_mark:before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 0;
+        background: url("radio_icon.png") no-repeat 0 0;
+        width: 22px;
+        height: 22px;
+    }
+    
+    .radio_tabs li label .input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0;
+    }
+    
+    .radio_tabs li label .input:checked~.radio_mark {
+        color: darkblue;
+    }
+    
+    .radio_tabs li label .input:checked~.radio_mark:before {
+        background-position: 0 -23px;
+        width: 22px;
+        height: 22px;
+    }

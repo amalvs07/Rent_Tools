@@ -1,0 +1,281 @@
+.search {
+    padding: 25px;
+}
+
+.copyrightText {
+    width: 100%;
+    background: #fff;
+    padding: 8px 100px;
+    text-align: center;
+    color: black;
+}
+
+.search .icon {
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    position: absolute;
+    top: 240px;
+    right: 12%;
+    text-align: center;
+    background: white;
+    font-size: 20px;
+    color: dodgerblue;
+    cursor: pointer;
+}
+
+i.fas.fa-search {
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.search-text {
+    padding-left: 10px;
+    width: 80%;
+    height: 50px;
+}
+
+tr th {
+    background-color: dodgerblue;
+    padding: 2%;
+    width: 20%;
+}
+
+tr th:first-child {
+    text-align: left;
+}
+
+tr td {
+    background-color: rgb(132, 187, 241);
+    opacity: .6;
+    padding: 15px;
+}
+
+tr td:hover {
+    background-color: rgb(110, 149, 189);
+}
+
+tr td:first-child {
+    padding-right: 50px;
+    text-align: left;
+}
+
+tr td:nth-child(even) {
+    padding-right: 30px;
+}
+
+tr td:last-child {
+    padding-right: 50px;
+}
+
+
+/* feedback code */
+
+.table-feedback tr th {
+    background-color: #5cb85c;
+}
+
+.table-feedback tr td {
+    background-color: #87bd87;
+}
+
+.table-feedback tr td:hover {
+    background-color: #789978;
+}
+
+
+/* order code */
+
+.table-order tr th {
+    background-color: #d9534f !important;
+}
+
+.table-order tr td {
+    background-color: #ec8d8a !important;
+    opacity: 1 !important;
+}
+
+.table-order tr td:hover {
+    background-color: #cf7b78 !important;
+}
+
+
+/* stocks code */
+
+.table-stock tr th {
+    background-color: rgb(221, 16, 221)!important;
+}
+
+.table-stock tr td {
+    background-color: rgb(231, 128, 231) !important;
+    opacity: 1 !important;
+}
+
+.table-stock tr td:hover {
+    background-color: rgb(145, 66, 145) !important;
+}
+
+
+/* toools code */
+
+.table-tools tr th {
+    background-color: #f0ad4e;
+}
+
+.table-tools tr td {
+    background-color: #fcd399;
+}
+
+.table-tools tr td:hover {
+    background-color: #e0ba87;
+}
+
+
+/* ordernewview */
+
+.table-ordernew tr th {
+    background-color: #3bdbf0 !important;
+}
+
+.table-ordernew tr th {
+    background-color: #74d1dd !important;
+}
+
+.table-ordernew tr th {
+    background-color: #a9dde4 !important;
+}
+
+tr td img {
+    width: 100%;
+}
+
+td a {
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+td .edit {
+    background: dodgerblue;
+    color: #fff;
+    margin: 5px;
+}
+
+td .delete {
+    background: #d1122b;
+    color: #fff;
+    margin: 5px;
+}
+
+
+/********************************* form in put codes ****************************************/
+
+.form-design {
+    position: relative;
+    padding: 30px;
+    width: 200%;
+    max-width: 30%;
+    left: 35%;
+    border-radius: 20px;
+    /* box-shadow: 0px 0px 20px 3px black; */
+}
+
+.form-design form {
+    width: 30em;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+/* h2 {
+    text-align: center;
+    margin-bottom: 40px;
+} */
+
+form .field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+form .field input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    border-bottom-width: 2px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+form .field input[type="file"] {
+    padding-top: 10px;
+    padding-left: 150px;
+}
+
+form .field select {
+    width: 100%;
+    height: 100%;
+}
+
+form .field input:focus {
+    border-color: #f0ad4e;
+    /* box-shadow: inset 0 0 3px #fb6aae; */
+}
+
+form .field input::placeholder {
+    color: #999;
+    transition: all 0.3s ease;
+}
+
+form .field input:focus::placeholder {
+    color: #b3b3b3;
+}
+
+form .btn {
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+form .btn .btn-layer {
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    background: -webkit-linear-gradient(right, #548bdd, #0a68e4, #548bdd, #0a68e4);
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    ;
+}
+
+form .btn:hover .btn-layer {
+    left: 0;
+}
+
+form .btn input[type="submit"] {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    background: none;
+    border: none;
+    color: #fff;
+    padding-left: 0;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+form label {
+    color: #888;
+    font-size: 18px;
+    padding: 10px;
+}

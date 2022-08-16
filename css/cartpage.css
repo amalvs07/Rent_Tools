@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/********************** common css code ****************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+i {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    /* margin: auto; */
+    padding-top: 40px;
+    margin: 130px 100px 0px 130px;
+}
+
+p {
+    margin-top: 30px;
+    text-align: center;
+    color: darkgrey;
+    font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans';
+}
+
+h2 {
+    margin-top: 60px;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/***************************nav bar codes********************/
+
+.navbar {
+    width: 100%;
+    z-index: 999;
+    padding: 40px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    justify-content: space-between;
+    background-color: darkblue;
+}
+
+.navbar .max-widthh {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 90px;
+}
+
+.navbar .logo a {
+    position: relative;
+    top: 5px;
+    right: 150px;
+    color: #fff;
+    /* color: #fff; */
+    font-size: 35px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar .logo a span {
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.navbar .menu {
+    position: relative;
+    /* left: 38em;
+    top: 20px; */
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: #000;
+    /* color: #fff; */
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 30px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar .menu li a span {
+    display: inline-block;
+    font-size: 17px;
+}
+
+.navbar .menu li a:hover {
+    color: darkblue;
+}
+
+.navbar.sticky .menu {
+    padding-right: 10px;
+    position: relative;
+    left: 38em;
+    top: 10px;
+}
+
+.navbar.sticky .menu li a {
+    color: #fff;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #fff;
+}
+
+.cart,
+.user {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.navbar #cart_count {
+    text-align: center;
+    color: #fff;
+    padding: 0 0.9rem 0.1rem 0.9rem;
+    border-radius: 3em;
+    background: blue;
+}
+
+.navbar.sticky #cart_count {
+    text-align: center;
+    color: blue;
+    padding: 0 0.9rem 0.1rem 0.9rem;
+    border-radius: 3em;
+    background: #fff;
+}
+
+
+/************************* Slide bar menu ******************************/
+
+.wrapper {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 250px;
+    height: 100%;
+    background: blue;
+    transition: all .5s ease;
+}
+
+.sidebar header {
+    font-size: 22px;
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    background: darkblue;
+    user-select: none;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    transition: .4s;
+    text-decoration: none;
+}
+
+.sidebar ul li:hover a {
+    padding-left: 50px;
+}
+
+.sidebar ul a i {
+    margin-right: 16px;
+}
+
+#check {
+    display: none;
+}
+
+label #btn,
+label #cancel {
+    position: absolute;
+    background: blue;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+label #btn {
+    left: 250px;
+    top: -10px;
+    font-size: 25px;
+    color: white;
+    padding: 6px 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s;
+}
+
+label #cancel {
+    z-index: 1111;
+    left: 100px;
+    top: -10px;
+    font-size: 30px;
+    color: white;
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+
+#check:checked~.sidebar {
+    left: -250px;
+}
+
+#check:checked~label #btn {
+    left: -60px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#check:checked~label #cancel {
+    left: -195px;
+}
+
+#check:checked~section {
+    margin-left: 0px;
+}
+
+
+/******************* home section styling ***********************/
+
+body {
+    background: url(../img/50277.jpg) no-repeat top;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.home {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.shopping-cart {
+    padding: 3% 0;
+}
+
+.cart-items+.cart-items {
+    padding: 2% 0;
+}
+
+.price-details h6 {
+    padding: 3% 2%;
+}
+
+hr {
+    background-color: blue;
+}
+
+.shopping-cart h6 {
+    font-size: 20px;
+}
+
+.border {
+    border: 1px solid darkgray;
+}
+
+
+/************************* free delivery quote **********************/
+
+.note {
+    text-align: center;
+    background-color: darkgray;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/****************************** footer code css ********************************/
+
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #111;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+footer .footer .sec {
+    margin-right: 30px;
+}
+
+footer .footer .sec.aboutus {
+    width: 40%;
+}
+
+footer .footer h3 {
+    position: relative;
+    font-size: 17px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+footer .footer h3::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #f00;
+}
+
+footer .footer .sec.aboutus p {
+    color: #999;
+    text-align: justify;
+}
+
+.sci {
+    margin-top: 20px;
+    display: flex;
+}
+
+footer li {
+    list-style: none;
+}
+
+.sci li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.sci li a .fab {
+    color: #fff;
+    font-size: 20px;
+}
+
+.sci li a .fab:hover {
+    color: darkblue;
+    font-size: 20px;
+}
+
+.quicklinks {
+    position: relative;
+    width: 25%;
+}
+
+.quicklinks ul li a {
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.quicklinks ul li a:hover {
+    color: #fff;
+}
+
+.contact {
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+}
+
+.contact .info {
+    position: relative;
+}
+
+.contact .info li {
+    display: flex;
+}
+
+.contact .info li span:nth-child(1) {
+    color: #fff;
+    font-size: 50px;
+    margin-right: 10px;
+}
+
+.contact .info li span {
+    color: #999;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.contact .info li a {
+    color: #999;
+    text-decoration: none;
+}
+
+.contact .info li a:hover {
+    color: #fff;
+}
+
+.copyrightText {
+    width: 100%;
+    background: #181818;
+    padding: 8px 100px;
+    text-align: center;
+    color: #999;
+}
+
+@media (max-width: 1350px) {
+    .navbar .menu {
+        left: 30em;
+        top: 20px;
+    }
+    .navbar.sticky .menu {
+        padding-right: 10px;
+        position: relative;
+        left: 30em;
+        top: 10px;
+    }
+}
+
+@media (max-width: 1290px) {
+    .navbar .menu {
+        left: 30em;
+        top: 20px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .navbar .menu {
+        left: 20em;
+        top: 20px;
+    }
+    .menu {
+        display: none;
+    }
+    .wrapper {
+        height: 100%;
+        width: 300px;
+        position: relative;
+        display: block;
+    }
+    input[type="date"] {
+        width: 80%;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar .menu {
+        left: 10em;
+        top: 20px;
+    }
+    footer {
+        padding: 40px;
+    }
+    footer .footer {
+        flex-direction: column;
+    }
+    footer .footer .sec {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    footer .footer .sec.aboutus,
+    .quicklinks,
+    .contact {
+        width: 100%;
+    }
+    .copyrightText {
+        padding: 8px 100px;
+    }
+}

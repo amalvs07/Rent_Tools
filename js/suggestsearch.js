@@ -1,0 +1,15 @@
+let suggestions = [
+    "Trencher",
+    "Drills",
+    "Grainder",
+    "Lawn",
+    "Sander",
+    "Saw",
+    "Welding machine",
+    "power tools",
+    "fasteners",
+    "Hand tools",
+    "garden tools",
+    "tools",
+    "Work by job",
+];
